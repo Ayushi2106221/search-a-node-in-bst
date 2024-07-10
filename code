@@ -1,0 +1,17 @@
+bool search(Node* root, int data) {
+    if(root==NULL){
+        return false;
+    }
+    Node *ptr=root;
+    while(ptr!=NULL){
+        if(ptr->data==data)
+        return true;
+        else if(ptr->data<data)
+            ptr=ptr->right;
+        
+        else 
+            ptr=ptr->left;
+        
+    }
+    return false;
+}
